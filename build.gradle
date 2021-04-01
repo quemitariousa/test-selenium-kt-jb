@@ -1,0 +1,25 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.4.31'
+    id "com.github.erdi.webdriver-binaries" version "2.4"
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+
+test {
+    useJUnitPlatform()
+}
+
+
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    testCompile 'io.kotlintest:kotlintest-runner-junit5:3.1.8'
+    testCompile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.14.0'
+    testCompile group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version: '3.14.0'
+}
